@@ -154,7 +154,7 @@ Currently defined tagged fields are:
 * `f` (9): `data_length` variable, depending on version. Fallback on-chain address: for Bitcoin, this starts with a 5-bit `version` and contains a witness program or P2PKH or P2SH address.
 * `r` (3): `data_length` variable. One or more entries containing extra routing information for a private route; there may be more than one `r` field
    * `pubkey` (264 bits)
-   * `short_channel_id` (64 bits)
+   * `short_channel_id` (64 bits, big-endian)
    * `fee_base_msat` (32 bits, big-endian)
    * `fee_proportional_millionths` (32 bits, big-endian)
    * `cltv_expiry_delta` (16 bits, big-endian)
